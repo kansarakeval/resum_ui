@@ -113,7 +113,11 @@ class _Workspace_screenState extends State<Workspace_screen> {
                           SizedBox(width: 10,),
                           Text("Eduction"),
                           Spacer(),
-                          Icon(Icons.arrow_forward_ios)
+                          InkWell(
+                            onTap: () {
+                              Navigator.pushNamed(context, 'eduction');
+                            },
+                              child: Icon(Icons.arrow_forward_ios))
                         ],
                       ),
                     ),
@@ -131,7 +135,11 @@ class _Workspace_screenState extends State<Workspace_screen> {
                           SizedBox(width: 10,),
                           Text("Experiences"),
                           Spacer(),
-                          Icon(Icons.arrow_forward_ios)
+                          InkWell(
+                            onTap: () {
+                              Navigator.pushNamed(context, 'experience');
+                            },
+                              child: Icon(Icons.arrow_forward_ios))
                         ],
                       ),
                     ),
@@ -185,7 +193,11 @@ class _Workspace_screenState extends State<Workspace_screen> {
                           SizedBox(width: 10,),
                           Text("Projects"),
                           Spacer(),
-                          Icon(Icons.arrow_forward_ios)
+                          InkWell(
+                            onTap: () {
+                              Navigator.pushNamed(context, 'proj');
+                            },
+                              child: Icon(Icons.arrow_forward_ios))
                         ],
                       ),
                     ),
@@ -221,7 +233,11 @@ class _Workspace_screenState extends State<Workspace_screen> {
                           SizedBox(width: 10,),
                           Text("Refernces"),
                           Spacer(),
-                          Icon(Icons.arrow_forward_ios)
+                          InkWell(
+                            onTap: (){
+                              Navigator.pushNamed(context, 'references');
+                            },
+                              child: Icon(Icons.arrow_forward_ios))
                         ],
                       ),
                     ),
