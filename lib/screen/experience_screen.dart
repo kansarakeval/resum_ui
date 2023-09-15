@@ -30,8 +30,13 @@ class _ExperiencesScreenState extends State<ExperiencesScreen> {
                             onTap: () {
                               Navigator.pushNamed(context, 'work');
                             },
-                            child: Icon(Icons.navigate_before_sharp,color: Colors.white,)),
-                        SizedBox(width: 100,),
+                            child: Icon(
+                              Icons.navigate_before_sharp,
+                              color: Colors.white,
+                            )),
+                        SizedBox(
+                          width: 100,
+                        ),
                         Text(
                           "Experience",
                           style: TextStyle(
@@ -50,7 +55,9 @@ class _ExperiencesScreenState extends State<ExperiencesScreen> {
                 child: Container(
                   height: MediaQuery.of(context).size.height * 0.8,
                   width: MediaQuery.of(context).size.width * 0.9,
-                  decoration: BoxDecoration(borderRadius: BorderRadius.circular(10),color: Colors.white,
+                  decoration: BoxDecoration(
+                    borderRadius: BorderRadius.circular(10),
+                    color: Colors.white,
                   ),
                   child: Padding(
                     padding: const EdgeInsets.all(8.0),
@@ -58,43 +65,81 @@ class _ExperiencesScreenState extends State<ExperiencesScreen> {
                       children: [
                         Align(
                             alignment: Alignment.topLeft,
-                            child: Text("Course/Degree",style: TextStyle(fontWeight: FontWeight.bold,fontSize: 20),)),
-                        SizedBox(height: 5,),
+                            child: Text(
+                              "Course/Degree",
+                              style: TextStyle(
+                                  fontWeight: FontWeight.bold, fontSize: 20),
+                            )),
+                        SizedBox(
+                          height: 5,
+                        ),
                         TextField(
                           decoration: InputDecoration(
                             border: OutlineInputBorder(),
                             hintText: "Company Name",
                           ),
                         ),
-                        SizedBox(height: 5,),
+                        SizedBox(
+                          height: 5,
+                        ),
                         Align(
                             alignment: Alignment.topLeft,
-                            child: Text("New Enterise, San Francisco",style: TextStyle(fontWeight: FontWeight.bold,fontSize: 20),)),
-                        SizedBox(height: 5,),
+                            child: Text(
+                              "New Enterise, San Francisco",
+                              style: TextStyle(
+                                  fontWeight: FontWeight.bold, fontSize: 20),
+                            )),
+                        SizedBox(
+                          height: 5,
+                        ),
                         TextField(
                           decoration: InputDecoration(
                             border: OutlineInputBorder(),
                             hintText: "Quality Text Engineer",
                           ),
                         ),
-                        SizedBox(height: 5,),
+                        SizedBox(
+                          height: 5,
+                        ),
                         Align(
                             alignment: Alignment.topLeft,
-                            child: Text("Roles (optional)",style: TextStyle(fontWeight: FontWeight.bold,fontSize: 20),)),
-                        SizedBox(height: 5,),
+                            child: Text(
+                              "Roles (optional)",
+                              style: TextStyle(
+                                  fontWeight: FontWeight.bold, fontSize: 20),
+                            )),
+                        SizedBox(
+                          height: 5,
+                        ),
                         TextField(
                           keyboardType: TextInputType.text,
                           decoration: InputDecoration(
                             border: OutlineInputBorder(),
-                            hintText: "Working with team members to \n come  up with new concepts and \n product analysis..",
+                            hintText:
+                                "Working with team members to \n come  up with new concepts and \n product analysis..",
                           ),
                           maxLines: 3,
                         ),
-                        SizedBox(height: 5,),
+                        SizedBox(
+                          height: 5,
+                        ),
                         Align(
                             alignment: Alignment.topLeft,
-                            child: Text("Date Joined",style: TextStyle(fontWeight: FontWeight.bold,fontSize: 20),)),
-                        SizedBox(height: 5,),
+                            child: Text(
+                              "Date Joined",
+                              style: TextStyle(
+                                  fontWeight: FontWeight.bold, fontSize: 20),
+                            )),
+                        Align(
+                            alignment: Alignment.topLeft,
+                            child: Text(
+                              "Year Of Pass",
+                              style: TextStyle(
+                                  fontWeight: FontWeight.bold, fontSize: 20),
+                            )),
+                        SizedBox(
+                          height: 5,
+                        ),
                         TextField(
                           keyboardType: TextInputType.number,
                           decoration: InputDecoration(
@@ -102,8 +147,10 @@ class _ExperiencesScreenState extends State<ExperiencesScreen> {
                             hintText: "DD/MM/YYYY",
                           ),
                         ),
-                        SizedBox(height: 5,),
-                        ElevatedButton(onPressed: (){}, child: Text("save"))
+                        SizedBox(
+                          height: 5,
+                        ),
+                        ElevatedButton(onPressed: () {}, child: Text("save"))
                       ],
                     ),
                   ),
