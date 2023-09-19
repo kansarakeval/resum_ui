@@ -53,9 +53,9 @@ class _PhotoScreenState extends State<PhotoScreen> {
                           backgroundColor: deepOrangeprimary,maxRadius:50,minRadius: 50,
                           child:Text("ADD",style: TextStyle(fontSize: 20,fontWeight: FontWeight.bold,color: Colors.black),),
                         ),
-
                       ],
                     ),
+
 
                   ]
               ),

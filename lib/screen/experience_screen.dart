@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:resum_ui/util/colors.dart';
+import 'package:resum_ui/util/global.dart';
 
 class ExperiencesScreen extends StatefulWidget {
   const ExperiencesScreen({super.key});
@@ -9,6 +10,12 @@ class ExperiencesScreen extends StatefulWidget {
 }
 
 class _ExperiencesScreenState extends State<ExperiencesScreen> {
+  String employ = "previously employed";
+  TextEditingController txtcours=TextEditingController();
+  TextEditingController txtnew=TextEditingController();
+  TextEditingController txtroles=TextEditingController();
+  TextEditingController txtjoined=TextEditingController();
+  TextEditingController txtexit=TextEditingController();
   @override
   Widget build(BuildContext context) {
     return SafeArea(
@@ -53,7 +60,7 @@ class _ExperiencesScreenState extends State<ExperiencesScreen> {
               Padding(
                 padding: const EdgeInsets.all(20),
                 child: Container(
-                  height: MediaQuery.of(context).size.height * 0.8,
+                  height: MediaQuery.of(context).size.height * 0.9,
                   width: MediaQuery.of(context).size.width * 0.9,
                   decoration: BoxDecoration(
                     borderRadius: BorderRadius.circular(10),
@@ -73,7 +80,7 @@ class _ExperiencesScreenState extends State<ExperiencesScreen> {
                         SizedBox(
                           height: 5,
                         ),
-                        TextField(
+                        TextField(controller: txtcours,
                           decoration: InputDecoration(
                             border: OutlineInputBorder(),
                             hintText: "Company Name",
@@ -92,7 +99,7 @@ class _ExperiencesScreenState extends State<ExperiencesScreen> {
                         SizedBox(
                           height: 5,
                         ),
-                        TextField(
+                        TextField(controller: txtnew,
                           decoration: InputDecoration(
                             border: OutlineInputBorder(),
                             hintText: "Quality Text Engineer",
@@ -111,7 +118,7 @@ class _ExperiencesScreenState extends State<ExperiencesScreen> {
                         SizedBox(
                           height: 5,
                         ),
-                        TextField(
+                        TextField(controller: txtroles,
                           keyboardType: TextInputType.text,
                           decoration: InputDecoration(
                             border: OutlineInputBorder(),
@@ -120,37 +127,90 @@ class _ExperiencesScreenState extends State<ExperiencesScreen> {
                           ),
                           maxLines: 3,
                         ),
-                        SizedBox(
-                          height: 5,
-                        ),
                         Align(
                             alignment: Alignment.topLeft,
                             child: Text(
+                              "Employed Status",
+                              style: TextStyle(
+                                  fontWeight: FontWeight.bold, fontSize: 20),
+                            )),
+                        RadioListTile(
+                          value: "previously employed",
+                          groupValue: employ,
+                          onChanged: (value) {
+                            setState(() {
+                              employ = value!;
+                            });
+                          },
+                          title: Text("Previously Employed"),
+                        ),
+                        RadioListTile(
+                          value: "currently employed",
+                          groupValue: employ,
+                          onChanged: (value) {
+                            setState(() {
+                              employ = value!;
+                            });
+                          },
+                          title: Text("currently Employed"),
+                        ),
+                        SizedBox(
+                          height: 5,
+                        ),
+                        Row(
+                          children: [
+                            Text(
                               "Date Joined",
                               style: TextStyle(
                                   fontWeight: FontWeight.bold, fontSize: 20),
-                            )),
-                        Align(
-                            alignment: Alignment.topLeft,
-                            child: Text(
-                              "Year Of Pass",
+                            ),
+                            Spacer(),
+                            Text(
+                              "Date Exit",
                               style: TextStyle(
                                   fontWeight: FontWeight.bold, fontSize: 20),
-                            )),
-                        SizedBox(
-                          height: 5,
-                        ),
-                        TextField(
-                          keyboardType: TextInputType.number,
-                          decoration: InputDecoration(
-                            border: OutlineInputBorder(),
-                            hintText: "DD/MM/YYYY",
-                          ),
+                            ),
+                            Spacer(),
+                          ],
                         ),
                         SizedBox(
                           height: 5,
                         ),
-                        ElevatedButton(onPressed: () {}, child: Text("save"))
+                        Row(
+                          children: [
+                            Container(
+                              width: MediaQuery.of(context).size.width * 0.4,
+                              height: 50,
+                              child: TextField(controller: txtjoined,
+                                keyboardType: TextInputType.number,
+                                decoration: InputDecoration(
+                                  border: OutlineInputBorder(),
+                                  hintText: "DD/MM/YYYY",
+                                ),
+                              ),
+                            ),
+                            Spacer(),
+                            Container(
+                              width: MediaQuery.of(context).size.width * 0.4,
+                              height: 50,
+                              child: TextField(controller: txtexit,
+                                keyboardType: TextInputType.number,
+                                decoration: InputDecoration(
+                                  border: OutlineInputBorder(),
+                                  hintText: "DD/MM/YYYY",
+                                ),
+                              ),
+                            ),
+                          ],
+                        ),
+                        SizedBox(
+                          height: 5,
+                        ),
+                        ElevatedButton(onPressed: () {
+                          Global g1= Global();
+                          g1.experiencelist.addAll([txtcours.text,txtnew.text,txtroles.text,txtjoined.text,txtexit.text]);
+                          ScaffoldMessenger.of(context).showSnackBar(SnackBar(content: Text("${g1.experiencelist}")));
+                        }, child: Text("save"))
                       ],
                     ),
                   ),

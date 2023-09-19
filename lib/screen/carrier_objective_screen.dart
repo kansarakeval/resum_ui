@@ -24,13 +24,19 @@ class _CarrirObjectiveState extends State<CarrirObjective> {
                     height: MediaQuery.of(context).size.height * 0.2,
                     width: MediaQuery.of(context).size.width,
                     color: deepOrangeprimary,
-                    child: Column(
+                    child: Row(
                       children: [
-                        SizedBox(height: 40),
+                        InkWell(
+                            onTap: () {
+                              Navigator.pushNamed(context, 'work');
+                            },
+                            child: Icon(Icons.navigate_before_sharp,color: Colors.white,)),
+                        Spacer(),
                         Text(
                           " Carrier Objective ",
                           style: TextStyle(fontSize: 20, color: Colors.white),
                         ),
+                        Spacer()
                       ],
                     ),
                   ),

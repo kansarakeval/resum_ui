@@ -39,225 +39,45 @@ class _Workspace_screenState extends State<Workspace_screen> {
                       ],
                     ),
                   ),
-                  Container(
-                    height: MediaQuery.of(context).size.height * 0.07,
-                    width: MediaQuery.of(context).size.width,
-                    color: Colors.white,
-                    child: Padding(
-                      padding: const EdgeInsets.all(8.0),
-                      child: Row(
-                        children: [
-                          Icon(Icons.quick_contacts_mail_outlined),
-                          SizedBox(width: 10,),
-                          Text("Contact Info"),
-                          Spacer(),
-                          InkWell(
-                            onTap: () {
-                              Navigator.pushNamed(context, 'contects');
-                            },
-                              child: Icon(Icons.arrow_forward_ios))
-                        ],
-                      ),
-                    ),
-                  ),
-                  SizedBox(height: 6),
-                  Container(
-                    height: MediaQuery.of(context).size.height * 0.07,
-                    width: MediaQuery.of(context).size.width,
-                    color: Colors.white,
-                    child: Padding(
-                      padding: const EdgeInsets.all(8.0),
-                      child: Row(
-                        children: [
-                          Icon(Icons.area_chart),
-                          SizedBox(width: 10,),
-                          Text("Carrier Objective"),
-                          Spacer(),
-                          InkWell(
-                            onTap: () {
-                              Navigator.pushNamed(context, 'carrier');
-                            },
-                              child: Icon(Icons.arrow_forward_ios))
-                        ],
-                      ),
-                    ),
-                  ),
-                  SizedBox(height: 6),
-                  Container(
-                    height: MediaQuery.of(context).size.height * 0.07,
-                    width: MediaQuery.of(context).size.width,
-                    color: Colors.white,
-                    child: Padding(
-                      padding: const EdgeInsets.all(8.0),
-                      child: Row(
-                        children: [
-                          Icon(Icons.person),
-                          SizedBox(width: 10,),
-                          Text("Personal Details"),
-                          Spacer(),
-                          Icon(Icons.arrow_forward_ios)
-                        ],
-                      ),
-                    ),
-                  ),
-                  SizedBox(height: 6),
-                  Container(
-                    height: MediaQuery.of(context).size.height * 0.07,
-                    width: MediaQuery.of(context).size.width,
-                    color: Colors.white,
-                    child: Padding(
-                      padding: const EdgeInsets.all(8.0),
-                      child: Row(
-                        children: [
-                          Icon(Icons.cast_for_education),
-                          SizedBox(width: 10,),
-                          Text("Eduction"),
-                          Spacer(),
-                          InkWell(
-                            onTap: () {
-                              Navigator.pushNamed(context, 'eduction');
-                            },
-                              child: Icon(Icons.arrow_forward_ios))
-                        ],
-                      ),
-                    ),
-                  ),
-                  SizedBox(height: 6),
-                  Container(
-                    height: MediaQuery.of(context).size.height * 0.07,
-                    width: MediaQuery.of(context).size.width,
-                    color: Colors.white,
-                    child: Padding(
-                      padding: const EdgeInsets.all(8.0),
-                      child: Row(
-                        children: [
-                          Icon(Icons.e_mobiledata),
-                          SizedBox(width: 10,),
-                          Text("Experiences"),
-                          Spacer(),
-                          InkWell(
-                            onTap: () {
-                              Navigator.pushNamed(context, 'experience');
-                            },
-                              child: Icon(Icons.arrow_forward_ios))
-                        ],
-                      ),
-                    ),
-                  ),
-                  SizedBox(height: 6),
-                  Container(
-                    height: MediaQuery.of(context).size.height * 0.07,
-                    width: MediaQuery.of(context).size.width,
-                    color: Colors.white,
-                    child: Padding(
-                      padding: const EdgeInsets.all(8.0),
-                      child: Row(
-                        children: [
-                          Icon(Icons.military_tech),
-                          SizedBox(width: 10,),
-                          Text("Technical Skils"),
-                          Spacer(),
-                          Icon(Icons.arrow_forward_ios)
-                        ],
-                      ),
-                    ),
-                  ),
-                  SizedBox(height: 6),
-                  Container(
-                    height: MediaQuery.of(context).size.height * 0.07,
-                    width: MediaQuery.of(context).size.width,
-                    color: Colors.white,
-                    child: Padding(
-                      padding: const EdgeInsets.all(8.0),
-                      child: Row(
-                        children: [
-                          Icon(Icons.interests),
-                          SizedBox(width: 10,),
-                          Text("Interest/Hobbies"),
-                          Spacer(),
-                          Icon(Icons.arrow_forward_ios)
-                        ],
-                      ),
-                    ),
-                  ),
-                  SizedBox(height: 6),
-                  Container(
-                    height: MediaQuery.of(context).size.height * 0.07,
-                    width: MediaQuery.of(context).size.width,
-                    color: Colors.white,
-                    child: Padding(
-                      padding: const EdgeInsets.all(8.0),
-                      child: Row(
-                        children: [
-                          Icon(Icons.contact_page),
-                          SizedBox(width: 10,),
-                          Text("Projects"),
-                          Spacer(),
-                          InkWell(
-                            onTap: () {
-                              Navigator.pushNamed(context, 'proj');
-                            },
-                              child: Icon(Icons.arrow_forward_ios))
-                        ],
-                      ),
-                    ),
-                  ),
-                  SizedBox(height: 6),
-                  Container(
-                    height: MediaQuery.of(context).size.height * 0.07,
-                    width: MediaQuery.of(context).size.width,
-                    color: Colors.white,
-                    child: Padding(
-                      padding: const EdgeInsets.all(8.0),
-                      child: Row(
-                        children: [
-                          Icon(Icons.description),
-                          SizedBox(width: 10,),
-                          Text("Achievements"),
-                          Spacer(),
-                          Icon(Icons.arrow_forward_ios)
-                        ],
-                      ),
-                    ),
-                  ),
-                  SizedBox(height: 6),
-                  Container(
-                    height: MediaQuery.of(context).size.height * 0.07,
-                    width: MediaQuery.of(context).size.width,
-                    color: Colors.white,
-                    child: Padding(
-                      padding: const EdgeInsets.all(8.0),
-                      child: Row(
-                        children: [
-                          Icon(Icons.room_preferences),
-                          SizedBox(width: 10,),
-                          Text("Refernces"),
-                          Spacer(),
-                          InkWell(
-                            onTap: (){
-                              Navigator.pushNamed(context, 'references');
-                            },
-                              child: Icon(Icons.arrow_forward_ios))
-                        ],
-                      ),
-                    ),
-                  ),
-                  SizedBox(height: 6),
-                  Container(
-                    height: MediaQuery.of(context).size.height * 0.07,
-                    width: MediaQuery.of(context).size.width,
-                    color: Colors.white,
-                    child: Row(
-                      children: [
-                        Icon(Icons.insert_page_break),
-                        SizedBox(width: 10,),
-                        Text("Declaration"),
-                        Spacer(),
-                        Icon(Icons.arrow_forward_ios)
-                      ],
-                    ),
-                  ),
-                  SizedBox(height: 6),
+                  InkWell(
+                    onTap: () {
+                      Navigator.pushNamed(context, 'contects');
+                    },
+                      child: textFiledTile("Contact Info", Icons.contact_mail_sharp)),
+                  InkWell(
+                    onTap: () {
+                      Navigator.pushNamed(context, 'carrier');
+                    },
+                      child: textFiledTile("Carrier Objective", Icons.shopping_bag)),
+                  InkWell(
+                    onTap: () {
+                      Navigator.pushNamed(context, 'personal');
+                    },
+                      child: textFiledTile("Personal Details", Icons.person)),
+                  InkWell(
+                    onTap: (){
+                      Navigator.pushNamed(context, 'eduction');
+                    },
+                      child: textFiledTile("Eduction", Icons.cast_for_education)),
+                  InkWell(
+                    onTap: () {
+                      Navigator.pushNamed(context, 'experience');
+                    },
+                      child: textFiledTile("Experiences", Icons.e_mobiledata)),
+                  textFiledTile("Technical Skils", Icons.military_tech),
+                  textFiledTile("Interest/Hobbies", Icons.interests),
+                  InkWell(
+                    onTap: () {
+                      Navigator.pushNamed(context, 'proj');
+                    },
+                      child: textFiledTile("Projects", Icons.contact_page)),
+                  textFiledTile("Achievements", Icons.description),
+                  InkWell(
+                    onTap: () {
+                      Navigator.pushNamed(context, 'references');
+                    },
+                      child: textFiledTile("Refernces", Icons.room_preferences)),
+                  textFiledTile("Declaration", Icons.insert_page_break),
                 ],
               )
             ],
@@ -265,5 +85,25 @@ class _Workspace_screenState extends State<Workspace_screen> {
         ),
       ),
     );
+  }
+  Widget textFiledTile(String hint,IconData icon){
+    return Container(
+      height: MediaQuery.of(context).size.height * 0.07,
+      width: MediaQuery.of(context).size.width,
+      color: Colors.white,
+      child: Padding(
+        padding: const EdgeInsets.all(8.0),
+        child: Row(
+          children: [
+            Icon(icon),
+            SizedBox(width: 10,),
+            Text("$hint"),
+            Spacer(),
+            Icon(Icons.arrow_forward_ios)
+          ],
+        ),
+      ),
+    );
+
   }
 }
