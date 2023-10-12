@@ -64,7 +64,11 @@ class _Workspace_screenState extends State<Workspace_screen> {
                       Navigator.pushNamed(context, 'experience');
                     },
                       child: textFiledTile("Experiences", Icons.e_mobiledata)),
-                  textFiledTile("Technical Skils", Icons.military_tech),
+                  InkWell(
+                    onTap: () {
+                      Navigator.pushNamed(context, 'skill');
+                    },
+                      child: textFiledTile("Technical Skils", Icons.military_tech)),
                   textFiledTile("Interest/Hobbies", Icons.interests),
                   InkWell(
                     onTap: () {
@@ -78,6 +82,11 @@ class _Workspace_screenState extends State<Workspace_screen> {
                     },
                       child: textFiledTile("Refernces", Icons.room_preferences)),
                   textFiledTile("Declaration", Icons.insert_page_break),
+                  InkWell(
+                      onTap: () {
+                        Navigator.pushNamed(context, 'resum');
+                      },
+                      child: textFiledTile("Resum", Icons.family_restroom_outlined)),
                 ],
               )
             ],

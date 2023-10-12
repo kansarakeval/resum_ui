@@ -146,9 +146,18 @@ class _ProjectScreenState extends State<ProjectScreen> {
                         ElevatedButton(onPressed: (){
                           Global g1= Global();
                           g1.projectlist.addAll([txttitel.text,txtroles.text,txttechnologies.text,txtdescripation.text]);
+                          if(isc){
+                            g1.projectlist.add("C");
+                          }
+                          if(isflutter){
+                            g1.projectlist.add("Flutter");
+                          }
+                          if(iscprograming){
+                            g1.projectlist.add("C programming");;
+                          }
                           ScaffoldMessenger.of(context).showSnackBar(SnackBar(content: Text("${g1.projectlist}")));
 
-                        }, child: Text("save"))
+                        }, child: Text("save")),
                       ],
                     ),
                   ),

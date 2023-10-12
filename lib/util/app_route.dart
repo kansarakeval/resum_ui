@@ -7,7 +7,9 @@ import 'package:resum_ui/screen/experience_screen.dart';
 import 'package:resum_ui/screen/photo_screen.dart';
 import 'package:resum_ui/screen/presonaldetails_screen.dart';
 import 'package:resum_ui/screen/project_screen.dart';
+import 'package:resum_ui/screen/resum_screen.dart';
 import 'package:resum_ui/screen/resume_builder_screen.dart';
+import 'package:resum_ui/screen/technicalskils_screen.dart';
 import 'package:resum_ui/screen/workspace_screen.dart';
 
 Map<String,WidgetBuilder> screen_routes={
@@ -21,4 +23,6 @@ Map<String,WidgetBuilder> screen_routes={
   'proj':(context) => ProjectScreen(),
   'references':(context) => ReferencesScreen(),
   'personal': (context) => PersonalScreen(),
+  'skill': (context) => Technicalskilsscreen(),
+  'resum': (context) => ResumScreen()
 };
